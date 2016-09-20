@@ -1,0 +1,23 @@
+#elasticsearch
+export ES_LOGSTASH_USER_NAME=logstash_admin
+export ES_LOGSTASH_PWD=logstash_pwd
+export ES_KIBANA_ADMIN_USER_NAME=kibana_admin
+export ES_KIBANA_PWD=kibana_pwd
+export ES_KIBANA_USER_NAME=myuser
+export ES_KIBANA_USER_PWD=mypwd
+
+# shield
+export ES_SHIELD_SSL_KEYSTORE_PATH=/usr/share/elasticsearch/config/shield/keystore.jks
+export ES_SHIELD_SSL_KEYSTORE_PASS=changeme
+export ES_SHIELD_SSL_KEYSTORE_KEY_PASS=changeme
+export ES_SHIELD_TRANSPORT_SSL=true
+export ES_SHIELD_HTTP_SSL=true
+
+# kibana
+export KIBANA_ES_ADMIN_USERNAME=kibana_admin
+export KIBANA_ES_ADMIN_PASWORD=kibana_pwd
+export KIBANA_ES_URL=https://elasticsearch:9200
+export KIBANA_SSL_VERIFY=false
+export KIBANA_SSL_KEY=/etc/key/private.pem
+export KIBANA_SSL_CERT=/etc/key/public.pem
+export KIBANA_ENCRYPTION_KEY="some text to encrypt"

@@ -1,0 +1,34 @@
+elasticsearch:
+  net: host
+  tags:
+    - backend-logs
+  image: akinaru/docker-elasticsearch-shield:latest
+  command: elasticsearch
+  restart: always
+  volumes:
+    - ${USER_PATH}/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    - ${USER_PATH}/elasticsearch/shield/keystore.jks:/usr/share/elasticsearch/config/shield/keystore.jks
+    - ${USER_PATH}/elasticsearch_data:/usr/share/elasticsearch/data
+    - ${USER_PATH}/elasticsearch_log:/var/log/elasticsearch
+  ports:
+    - 9200:9200
+  environment:
+    - LOGSTASH_USER_NAME=${ES_LOGSTASH_USER_NAME}
+    - LOGSTASH_PWD=${ES_LOGSTASH_USER_NAME}
+    - KIBANA_ADMIN_USER_NAME=${ES_KIBANA_ADMIN_USER_NAME}
+    - KIBANA_PWD=${ES_KIBANA_PWD}
+    - KIBANA_USER_NAME=${ES_KIBANA_USER_NAME}
+    - KIBANA_USER_PWD=${ES_KIBANA_USER_PWD}
+kibana:
+  net: host
+  restart: always
+  tags:
+    - backend-logs
+  image: tzoratto/kibana-shield
+  command: kibana
+  ports:
+    - 5601:5601
+  volumes:
+    - ${USER_PATH}/kibana:/opt/kibana/config
+    - ${USER_PATH}/key:/etc/key
+    - ${USER_PATH}/kibana_log:/var/log/kibana

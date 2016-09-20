@@ -1,0 +1,13 @@
+/metrics-platform/alertmanager/config.yml
+/metrics-platform/prometheus/prometheus.yml
+/metrics-platform/stackfile.yml
+/metrics-platform/docker-compose.yml
+/metrics-platform/vars
+/metrics-platform/key/*.pem
+/log-platform/vars
+/log-platform/stackfile.yml
+/log-platform/docker-compose.yml
+/log-platform/kibana/kibana.yml
+/log-platform/elasticsearch/elasticsearch.yml
+/log-platform/elasticsearch/shield/keystore.jks
+/log-platform/key/*.pem
