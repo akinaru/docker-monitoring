@@ -1,9 +1,7 @@
 elasticsearch:
-  net: host
   tags:
     - backend-logs
   image: akinaru/docker-elasticsearch-shield:latest
-  command: elasticsearch
   restart: always
   volumes:
     - ${USER_PATH}/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
@@ -20,12 +18,10 @@ elasticsearch:
     - KIBANA_USER_NAME=${ES_KIBANA_USER_NAME}
     - KIBANA_USER_PWD=${ES_KIBANA_USER_PWD}
 kibana:
-  net: host
   restart: always
   tags:
     - backend-logs
   image: tzoratto/kibana-shield
-  command: kibana
   ports:
     - 5601:5601
   volumes:

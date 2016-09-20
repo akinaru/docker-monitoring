@@ -21,3 +21,6 @@ export KIBANA_SSL_VERIFY=false
 export KIBANA_SSL_KEY=/etc/key/private.pem
 export KIBANA_SSL_CERT=/etc/key/public.pem
 export KIBANA_ENCRYPTION_KEY="some text to encrypt"
+
+# user path for stackfile
+export USER_PATH=/home/bobby
