@@ -1,7 +1,7 @@
 elasticsearch:
   tags:
     - backend-logs
-  image: akinaru/docker-elasticsearch-shield:latest
+  image: bertrandmartel/docker-elasticsearch-shield:latest
   restart: always
   volumes:
     - ${USER_PATH}/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml

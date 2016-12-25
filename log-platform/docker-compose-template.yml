@@ -7,7 +7,7 @@ volumes:
 
 services:
   elasticsearch:
-    image: akinaru/docker-elasticsearch-shield:latest
+    image: bertrandmartel/docker-elasticsearch-shield:latest
     container_name: elasticsearch
     command: elasticsearch
     restart: always
